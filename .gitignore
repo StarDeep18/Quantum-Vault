@@ -1,0 +1,36 @@
+# ── Dependencies ─────────────────────────────────────────────
+node_modules/
+app/backend/.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ── Build outputs ────────────────────────────────────────────
+dist/
+app/frontend/dist/
+*.egg-info/
+*.egg
+
+# ── Environment / Secrets ────────────────────────────────────
+# NEVER commit real credentials. Copy .env.example → .env to get started.
+.env
+.env.local
+.env.*.local
+app/backend/.env
+app/frontend/.env
+
+# ── Runtime data ─────────────────────────────────────────────
+app/backend/data/
+
+# ── OS / Editor ──────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ── Logs ─────────────────────────────────────────────────────
+*.log
+logs/

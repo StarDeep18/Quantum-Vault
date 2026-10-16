@@ -1,0 +1,13 @@
+# Quantum Randomness Lab — backend runtime dependencies
+fastapi>=0.115
+uvicorn[standard]>=0.30
+pydantic>=2.8
+python-dotenv>=1.0
+
+# Quantum stack — real hardware providers (IQM preferred, IBM alternative).
+# NOTE: numpy must stay <2.5 (iqm-client's transitive deps pull 2.5.x which
+# breaks numba via iqm-pulla → librosa).
+qiskit>=1.2
+qiskit-ibm-runtime>=0.34
+iqm-client>=36
+numpy>=1.26,<2.5

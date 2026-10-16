@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f3f2ee" />
+    <meta name="description" content="Quantum Vault — your secrets, secured with randomness from quantum measurement." />
+    <title>Quantum Vault — A new kind of secure</title>
+    <script>
+      try {
+        const saved = localStorage.getItem('quantum-vault-theme');
+        const preferred = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = saved || preferred;
+      } catch { document.documentElement.dataset.theme = 'light'; }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/app/frontend/src/main.tsx"></script>
+  </body>
+</html>
